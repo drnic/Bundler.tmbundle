@@ -1,8 +1,18 @@
-= TextMate bundle for Bundler
+# TextMate bundle for Bundler #
 
 Helpers for managing Gemfiles and bundler command.
 
-== Installation
+## Features ##
+
+### Gemfile ###
+
+The following snippets/commands work within your Gemfile.
+
+Shift+Ctrl+Alt+B - Change to **Bundler** grammar/syntax
+
+`gem` + TAB - specify a gem name and it inserts Gemfile; e.g. `gem 'fakeweb', '1.2.8'`
+
+## Installation ##
 
 To install via Git:
 
@@ -14,7 +24,7 @@ To install via Git:
 Source can be viewed or forked via GitHub: [http://github.com/drnic/Bundler.tmbundle](http://github.com/drnic/Bundler.tmbundle)
 
 
-== LICENSE:
+## License ##
 
 (The MIT License)
 
