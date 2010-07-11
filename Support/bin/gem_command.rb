@@ -13,7 +13,7 @@ if gem_name = TextMate::UI.request_string(:title => 'Enter gem name:', :default 
   gem_specs = Gem.source_index.select do |gem| 
     gem.first =~ /^#{gem_name}-\d/
   end
-  if gem_spec = gem_specs.last
+  if gem_spec = gem_specs.sort.last
     print "gem '#{gem_name}', '#{gem_spec.last.version}'"
   else
     print "gem '#{gem_name}'"
