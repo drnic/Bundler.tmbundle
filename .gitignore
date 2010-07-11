@@ -1,0 +1,5 @@
+.bundle
+tmp
+vendor/cache
+build
+appcast
