@@ -4,6 +4,12 @@
 <dict>
 	<key>name</key>
 	<string>Bundler</string>
+	<key>ordering</key>
+	<array>
+		<string>57038843-9D98-459B-877C-4823FF016C3B</string>
+		<string>2647A79E-E2EB-46CA-9792-0CB0EDCBECEE</string>
+		<string>E480C4D2-051F-46A5-96CD-CC5DDBC83A78</string>
+	</array>
 	<key>uuid</key>
 	<string>D9A8CFB8-7AFA-4085-B6CB-315606521E92</string>
 </dict>

@@ -10,7 +10,11 @@ The following snippets/commands work within your Gemfile.
 
 Shift+Ctrl+Alt+B - Change to **Bundler** grammar/syntax
 
-`gem` + TAB - specify a gem name and it inserts Gemfile; e.g. `gem 'fakeweb', '1.2.8'`
+**Tab Completions:**
+
+`gem` - specify a gem name and it inserts Gemfile; e.g. `gem 'fakeweb', '1.2.8'`
+
+`group` - snippet for the `group :development do ... end` block
 
 ## Installation ##
 
