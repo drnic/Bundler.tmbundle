@@ -12,7 +12,7 @@ Shift+Ctrl+Alt+B - Change to **Bundler** grammar/syntax
 
 **Tab Completions:**
 
-`gem` - specify a gem name and it inserts Gemfile; e.g. `gem 'fakeweb', '1.2.8'`
+`gem` - specify a gem name and it inserts Gemfile; e.g. `gem 'fakeweb', '1.2.8'` or `gem 'awesome_print', '0.2.1', :require => 'ap'`
 
 `group` - snippet for the `group :development do ... end` block
 
