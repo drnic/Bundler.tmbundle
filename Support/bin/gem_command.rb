@@ -15,9 +15,11 @@ if gem_name = TextMate::UI.request_string(:title => 'Enter gem name:', :default 
   end
   if gem_spec = gem_specs.sort.last
     gem_spec = gem_spec.last # ['name-1.0.0', spec obj]
-    load_files = gem_spec.files.select { |f| f =~ /^lib\/([\w_\-]+)\.rb$/}
-    if load_files && load_files.first =~ /lib\/(.*)\.rb/
-      requirement = ", :require => '#{$1}'" if $1 != gem_name
+    unless gem_spec.files.select { |f| f =~ /^lib\/#{gem_name}\.rb$/}.size == 1
+      load_files = gem_spec.files.select { |f| f =~ /^lib\/([\w_\-]+)\.rb$/}
+      if load_files && load_files.first =~ /lib\/(.*)\.rb/
+        requirement = ", :require => '#{$1}'" if $1 != gem_name
+      end
     end
     print "gem '#{gem_name}', '${1:#{gem_spec.version}}'#{requirement}"
   else
