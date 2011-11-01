@@ -10,11 +10,10 @@ default_string = `pbpaste`.strip if default_string.nil? || default_string.size =
 
 if gem_name = TextMate::UI.request_string(:title => 'Enter gem name:', :default => default_string)
   require "rubygems"
-  gem_specs = Gem.source_index.select do |gem| 
-    gem.first =~ /^#{gem_name}-\d/
+  gem_specs = Gem::Specification.select do |gem|
+    gem.original_name =~ /^#{gem_name}-\d/
   end
-  if gem_spec = gem_specs.sort.last
-    gem_spec = gem_spec.last # ['name-1.0.0', spec obj]
+  if gem_spec = gem_specs.sort.last # [#<Gem::Specification name=awesome_print version=0.4.0>]
     unless gem_spec.files.select { |f| f =~ /^lib\/#{gem_name}\.rb$/}.size == 1
       load_files = gem_spec.files.select { |f| f =~ /^lib\/([\w_\-]+)\.rb$/}
       if load_files && load_files.first =~ /lib\/(.*)\.rb/
